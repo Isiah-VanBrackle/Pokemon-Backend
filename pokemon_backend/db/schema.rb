@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2018_09_28_211809) do
   create_table "pokemons", force: :cascade do |t|
     t.string "species"
     t.string "sprite_image"
-    t.string "battle_type"
+    t.string "battle_type_1"
+    t.string "battle_type_2"
     t.string "image"
     t.string "description"
     t.datetime "created_at", null: false
