@@ -10,6 +10,63 @@ require 'json'
 require 'pry'
 
  Pokemon.destroy_all #clear old seeds every time i seed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #   # make the web request
 #   pokemon_data = RestClient.get('http://pokeapi.co/api/v2/pokemon/?limit=150')
 #   # parse that data and javascript object notationify it
@@ -17,15 +74,15 @@ require 'pry'
 #   generation_one = pokemon_hash["results"].slice!(0..151)
 #
 #
-def pokemon_list(generation_one)
-  generation_one.each do |pokemen|
-    pokemon_link = pokemen["url"]
-    sleep(1)
-    individual_pokemon = RestClient.get(pokemon_link)
-    pokemon = JSON.parse(individual_pokemon.body)
-    Pokemon.create(species: pokemon["forms"]["name"], sprite_image: pokemon["sprite"]["front_default"], battle_type: pokemon["types"])
-  end
-end
+# def pokemon_list(generation_one)
+#   generation_one.each do |pokemen|
+#     pokemon_link = pokemen["url"]
+#     sleep(1)
+#     individual_pokemon = RestClient.get(pokemon_link)
+#     pokemon = JSON.parse(individual_pokemon.body)
+#     Pokemon.create(species: pokemon["forms"]["name"], sprite_image: pokemon["sprite"]["front_default"], battle_type: pokemon["types"])
+#   end
+# end
 
 
 pokemon_list(generation_one)
