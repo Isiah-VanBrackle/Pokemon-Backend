@@ -47,6 +47,7 @@ end
 
 pokemon_list(generation_one)
 
+# comment
 # all pkmn images
 
 
