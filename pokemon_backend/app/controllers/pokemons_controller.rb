@@ -1,6 +1,6 @@
 class PokemonsController < ApplicationController
   def index
-    byebug
-    p params
+    @pokemon = Pokemon.all
+    render json: @pokemon.to_json
   end
 end

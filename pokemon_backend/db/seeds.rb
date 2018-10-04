@@ -9,12 +9,12 @@ require 'rest-client'
 require 'json'
 require 'pry'
 
- #Pokemon.destroy_all #clear old seeds every time i seed
-#   # make the web request
+ Pokemon.destroy_all #clear old seeds every time i seed
+  # make the web request
   pokemon_data = RestClient.get('http://pokeapi.co/api/v2/pokemon')
 #   # parse that data and javascript object notationify it
   pokemon_hash = JSON.parse(pokemon_data.body)
-  generation_one = pokemon_hash["results"].slice(6..10)
+  generation_one = pokemon_hash["results"].slice(140..150)
 #
 #
 def pokemon_list(generation_one)
@@ -47,8 +47,8 @@ end
 
 pokemon_list(generation_one)
 
-# comment
-# all pkmn images
+comment
+all pkmn images
 
 
 
